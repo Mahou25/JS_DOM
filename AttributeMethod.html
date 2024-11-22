@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BadStack</title>
+    <style>
+        input{
+            background-color: red;
+            font-size: 12px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="username" placeholder="username" style="background-color: white;">
+
+    <script>
+        let inputBox = document.getElementById("username");
+
+        console.log(inputBox.attributes);
+    </script>
+
+    <!-- Get attributes method -->
+    <script>
+        let entreBox = document.getElementById("username");
+        console.log(entreBox.getAttribute("type"));
+    </script>
+
+    <!-- setAttribute() Method -->
+     <script>
+        let inuptBox = document.getElementById("username");
+        
+        inuptBox.setAttribute("class", "user");
+
+        console.log(inuptBox);
+     </script>
+
+     <!-- hasAttribute -->
+     <script>
+        let iunptBox = document.getElementById("username");
+        
+        // iunptBox.setAttribute("class", "user");
+
+        console.log(iunptBox.hasAttribute("class"));
+     </script>
+
+     <!-- removeAttribute -->
+     <script>
+        let uinptBox = document.getElementById("username");
+        
+        // uinptBox.setAttribute("class", "user");
+
+        console.log(uinptBox.removeAttribute("placeholder"));
+        console.log(uinptBox);
+     </script>
+
+     <!-- Manipulating Element's Style -->
+     <!-- Style Property-->
+      <br>
+      <br>
+      <br>
+     <input type="text" id="usernam" placeholder="username" style="background-color: red; font-size: 20px;">
+     <script>
+        let inputBx = document.getElementById("usernam");
+        inputBx.style.padding = "10px";
+
+        console.log(inputBx.style.backgroundColor);
+
+        inputBx.style.cssText += "width:200px; height: 100px;";// Le cssText est le contenu de l'attirbut style
+
+        inputBx.style.backgroundColor = "white";
+
+        console.log(inputBx.style.backgroundColor);
+
+        console.log(inputBx);
+
+     </script>
+
+     <!-- getComputedStyle() -->
+      <br>
+      <br>
+      <br>
+      <br>
+
+     <input type="datetime-local" id="userLastName" placeholder="username">
+     <script>
+        let inputxoB = document.getElementById("userLastName");
+        // inputxoB.style.cssFloat += "width:200px; height: 100px";
+        console.log(window.getComputedStyle(inputxoB).fontSize);
+        // console.log(inputxoB);
+     </script>
+
+</body>
+</html>

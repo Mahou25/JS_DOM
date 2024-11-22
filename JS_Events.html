@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreatStack</title>
+</head>
+<body>
+    <div id="container">
+        <button type="button" id="btn">Click Here</button>
+    </div>
+
+    <script>
+        let btn = document.getElementById("btn");
+        function displayMsg(event) {
+            console.log("Button Clicked");
+        }
+        btn.addEventListener('click', displayMsg);
+        btn.removeEventListener('click', displayMsg);
+    </script>
+
+    <!-- <script>
+        let btn = document.getElementById("btn");
+         btn.onclick = null ;//function() {
+        //     console.log("button clicked");
+            
+        // }
+    </script> -->
+
+    <!-- Event bubbling:
+     Event starts at the most specific element and flows towards least specific element.
+    -->
+
+    <!-- Event capturing:
+      Event starts at the least specific element and flows toward the most specific element
+    -->
+
+    <!-- An event handler is a piece of code that will be executed when event occurs . 
+    -->
+
+    <!-- HTML Event Handler Attributes -->
+    
+    <!-- <script>
+        function displayMsg(params) {
+            console.log("Buton Clicked from Fn");
+        }
+    </script> -->
+
+    <!-- "this" keyword inside the event handler refers to target element.  -->
+
+    <!-- addEventLister() & removeEventListener -->
+
+    <!-- addEventLister() will register an event handler And removeEventListener will remove an event handler-->
+
+    <!-- mousemove: Event fires repeatedly when you move the mouse cursor around the element -->
+    <!-- mousedown: Event fires when you press the mouse button on the element -->
+    <!-- mouseup: Event fires when you release the mouse button on the element. -->
+    <!-- mouseover: Event fires when the cursor move from outside to inside the boundaries of the element -->
+    <!-- mouseout: Event fires when the cursor is over an element and then moves to another element -->
+    <!-- keydown: Event fires when you press a key on the keyboard & fires repeatedly while you're holding down the key. -->
+    <!-- keyup: Event fires when you release a key on the keyboard. -->
+    <!-- keypress: Event fires when you press a character on keyboard like a, b, c... It fires repeatedly while you hold down the key on the keyboard. -->
+    <!-- scroll: Event fires when you scroll a document or an element the scroll events fires -->
+</body>
+</html>

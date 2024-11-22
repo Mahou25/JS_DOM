@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Great Stack</title>
+</head>
+<body>
+    <!-- Get element by Id -->
+    <div>
+        <p id="message">JavaScript DOM</p>
+    </div>
+
+    <script>
+        let msg =  document.getElementById("message");
+        console.log(msg);
+    </script>
+
+    <!-- Get element by Name -->
+    <div>
+        <input type="radio" name="language" value="JS">
+        <input type="radio" name="language" value="Python">
+    </div>
+
+    <script>
+        let btn = document.getElementsByName("language");
+        console.log(btn);
+    </script>
+
+    <!-- Get element by Tag Name -->
+    <h1>first heading</h1>
+    <h1>second heading</h1>
+    <h1>third heading</h1>
+    <h1>fourth heading</h1>
+
+    <script>
+        let heading = document.getElementsByTagName("h1");
+        console.log(heading);
+    </script>
+
+    <!-- Get element by Class Name -->
+    <h1 class="message">first element</h1>
+    <h1 class="message">second element</h1>
+    <h1 class="message">third element</h1>
+    
+    <script>
+        let elm = document.getElementsByClassName("message");
+        console.log(elm);
+    </script>
+
+    <!--  -->
+    <h1 class="message">first object</h1>
+    <div id="container">
+        <h1 class="message">second object</h1>
+        <h1 class="message">third object</h1>
+    </div>
+
+    <script>
+        let cont = document.getElementById("container");
+        let obj = cont.getElementsByClassName("message");
+        console.log(obj);
+    </script>
+
+
+
+    <!-- Query Selector and Query Selector All method -->
+    <!-- The querySelector() method allos you to select the first element that matches one or more CSS selectors.-->
+    <h1 class="selector">first seclector</h1>
+    <div id="cont">
+        <h1 class="selector">second selector</h1>
+        <h1 class="selector">third selector</h1>
+    </div>
+    <script>
+        let mgs = document.querySelector(".selector");
+        console.log(mgs);
+
+        console.log("Query Selector All Usage");
+        let all = document.querySelectorAll(".selector");
+        console.log(all);
+
+        console.log("Query Selector All on getElementById Object")
+        let cnt = document.getElementById("cont");
+        let cnt_children = cnt.querySelectorAll(".selector");
+        console.log(cnt_children);
+    </script>
+
+    
+</body>
+</html>

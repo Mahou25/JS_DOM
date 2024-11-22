@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- To get a parent node of a specified node in the DOM tree, we can use the parentNode property. -->
+    <div class="title">
+        <p class="text">Welcome to GreatStack</p>
+    </div>
+    <script>
+        let txt = document.querySelector(".text");
+        console.log(txt.parentNode);
+    </script>
+
+    <!-- Getting child elements of a Node in a javascript  -->
+    <div class="titles">
+        <p>Welcome to GreatStack 1</p>
+        <p>Welcome to GreatStack 2</p>
+        <p>Welcome to GreatStack 3</p>
+        <p>Welcome to GreatStack 4</p>
+    </div>
+
+    <script>
+        let parent = document.querySelector(".titles");
+
+        console.log(parent.firstChild);
+        console.log(parent.firstElementChild);
+        console.log(parent.lastChild);
+        console.log(parent.lastElementChild);
+        console.log(parent.childNodes);
+    </script>
+
+    <!-- How to select the next siblings, previous siblings of an element  -->
+    <div class="titles_list2">
+        <p>Welcome to my GreatStack 1</p>
+        <p class="second">Welcome to my GreatStack 2</p>
+        <p>Welcome to my GreatStack 3</p>
+        <p>Welcome to my GreatStack 4</p>
+    </div>
+
+    <script>
+        let second = document.querySelector(".second");
+        console.log(second.previousElementSibling);
+        console.log(second.nextElementSibling);
+        console.log(second.nextSibling);
+    </script>
+
+    
+</body>
+</html>

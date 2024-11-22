@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Query Selector and Query Selector All method -->
+    <!-- The querySelector() method allos you to select the first element that matches one or more CSS selectors.-->
+    <h1 class="selector">first seclector</h1>
+    <div id="cont">
+        <h1 class="selector">second selector</h1>
+        <h1 class="selector">third selector</h1>
+    </div>
+    <script>
+        let mgs = document.querySelector(".selector");
+        console.log(mgs);
+
+        console.log("Query Selector All Usage");
+        let all = document.querySelectorAll(".selector");
+        console.log(all);
+
+        console.log("Query Selector All on getElementById Object")
+        let cnt = document.getElementById("cont");
+        let cnt_children = cnt.querySelectorAll(".selector");
+        console.log(cnt_children);
+
+        console.log("We can also use a querySelector on id, div, h& etc");
+        let gsm = document.querySelectorAll("div, h1");
+        console.log(gsm);
+    </script>
+</body>
+</html>

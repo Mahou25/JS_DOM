@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- The document.createElement() accepts an HTML tag name and returns a new Node with the Element type. -->
+
+    <script>
+        let div =  document.createElement("div");
+        div.innerHTML = "<p>Welcome to GreatStack</p>";
+        div.id = "title";
+        div.className="my_welcome";
+        document.body.appendChild(div);
+        console.log(div);
+    </script>
+
+    <!-- We use appendChild() method to add a node to the end of the list of child nodes of a specified parent node .-->
+    <!-- The appendChild() can be used to move an existing child node to the new position within the  document.-->
+
+    <ul id="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Blog</li>
+        <li>Project</li>
+    </ul>
+
+    <script>
+        let menu = document.getElementById("menu");
+
+        let list = document.createElement("li");
+
+        list.innerHTML = "Contact";
+
+        list.style = "display: none;"
+
+        menu.appendChild(list);
+    </script>
+
+
+    <!-- Text Content -->
+    <!-- To get a text content of a node and its descendants, you can use the text content property. -->
+    <script>
+        let men = document.getElementById("menu");
+        console.log(menu.textContent);// <!-- All the Text Content -->
+        console.log(menu.innerText); //Just the visible value
+        // menu.innerHTML = "<h1>Hello</h1>";
+        // menu.textContent = "<h1>Hello !</h1>";
+    </script>
+    
+    <!-- We can use after() method to insert one or more nodes after the element. -->
+    <ul id="unem">
+        <li>emoH</li>
+        <li>tuobA</li>
+        <li>golB</li>
+        <li>tcejorP</li>
+    </ul>
+
+    <script>
+        let unem = document.getElementById("unem");
+        // element.after(node); 
+        // unem.after(node);
+
+        // parentNode.append(newNodes); append can add multiple nodes while appendChild can add just one nodes
+
+        // parentNode.prepend(newNodes); add a node as a first child of a parent.
+
+        // element.insertAdjacentHTML(positionName, text); syntaxe de la methode insert adjacentHTML
+        menu.insertAdjacentHTML("beforeend", "<li>Contact</li>");
+        unem.insertAdjacentHTML("beforeend", "<li>tcatnoC</li>");
+
+        // parentNode.replaceChild(newChild, oldChild);
+        for (let i = 0; i < menu.children.length; i++) {
+            if (menu.children[i].textContent === "Project") {
+                // Créer un nouvel élément <li> avec le texte "Projet"
+                const newLi = document.createElement("li");
+                newLi.textContent = "Projet";
+                
+                // Remplacer l'ancien <li> par le nouveau
+                menu.replaceChild(newLi, menu.children[i]);
+                break; // Sortir de la boucle après le remplacement
+            }
+        }
+        
+        // let newNode = originalNode.cloneNode();
+        // Cloner l'élément <ul> et ses enfants (deep clone)
+        const clonedMenu = menu.cloneNode(true);
+
+        let lust = document.createElement("li");
+        lust.innerHTML = "Contact Me";
+        clonedMenu.appendChild(lust);
+
+        document.body.appendChild(clonedMenu);
+    </script>
+
+    <!-- Use insertBefore() method to insert a new node before an existing node as a child node of a parent node. -->
+    <ul id="emnu">
+        <li>Accueil</li>
+        <li>A Propos</li>
+        <li>Vlog</li>
+        <li>Projets</li>
+    </ul>
+
+    <script>
+        let emnu = document.getElementById("emnu");
+
+        // Créer un nouveau nœud <li>
+        let newNode = document.createElement("li");
+        newNode.textContent = "Contact Us";
+        
+        // parentNode.insertBefore(newNode, existingNode);
+        emnu.insertBefore(newNode, emnu.firstElementChild);
+    </script>
+</body>
+</html>
